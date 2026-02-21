@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<div class="container py-5" style="min-height: 100vh;">
+    
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <div>
+            <h1 class="fw-bold" style="color: #1A5319; font-size: 2.5rem;">My Crops</h1>
+            <p class="text-muted">Smart monitoring for your plant health</p>
+        </div>
+        <a href="/index" class="btn btn-analysis text-decoration-none">
+            🚀 Start Analysis
+        </a>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="glass-card p-4 text-center">
+                <div class="plant-circle">
+                    <img src="https://w7.pngwing.com/pngs/689/481/png-transparent-tomato-tomato-natural-foods-food-nightshade-family-thumbnail.png" alt="Tomato">
+                </div>
+                <h4 class="fw-bold mb-1">Tomato</h4>
+                <p class="text-success small fw-bold">Healthy Grade A</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="glass-card p-4 text-center">
+                <div class="plant-circle">
+                    <img src="https://w7.pngwing.com/pngs/320/313/png-transparent-potato-vegetable-tomato-onion-food-potato-food-tomato-onion-thumbnail.png" alt="Potato">
+                </div>
+                <h4 class="fw-bold mb-1">Potato</h4>
+                <p class="text-success small fw-bold">Root Analysis OK</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="glass-card p-4 text-center">
+                <div class="plant-circle">
+                    <img src="https://w7.pngwing.com/pngs/640/701/png-transparent-green-bell-pepper-bell-pepper-chili-pepper-chili-con-carne-vegetable-pepper-natural-foods-food-tomato-thumbnail.png" alt="Pepper">
+                </div>
+                <h4 class="fw-bold mb-1">Pepper</h4>
+                <p class="text-success small fw-bold">Monitoring Active</p>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+</div>
+{% endblock %}

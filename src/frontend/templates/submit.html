@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container py-5 d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="col-lg-8 text-center">
+        
+        <div class="d-inline-block bg-white p-3 rounded-5 shadow-sm mb-4">
+            <img src="{{ image_url }}" 
+                 alt="Plant Analysis"
+                 class="rounded-4 shadow-sm" 
+                 style="width: 400px; height: 400px; object-fit: cover; border: 4px solid #F0F9F1;">
+            <div class="mt-2">
+                <span class="badge rounded-pill bg-success-subtle text-success px-3 py-2">
+                    AI Analysis Result
+                </span>
+            </div>
+        </div>
+
+        <div class="bg-white p-5 rounded-5 shadow-sm">
+            <h1 class="fw-bold display-5 mb-2" style="color: #1A5319;">{{ title }}</h1>
+            
+            <div class="mb-4">
+                <p class="text-muted fw-bold">Confidence Score: <span class="text-success">{{ pred }}%</span></p>
+            </div>
+
+            <div class="p-4 bg-light rounded-4 mb-5 border-top border-bottom border-success border-2">
+                <h5 class="fw-bold text-dark mb-3">📋 Detailed Report</h5>
+                <div class="report-content text-start"> 
+                    {{ desc | safe }}
+                </div>
+            </div>
+
+            <!-- PDF Download Section -->
+            <div class="mb-4">
+                <h3>Download Your PDF</h3>
+                {% if pdf_files %}
+                    <ul class="list-group w-100">
+                        {% for pdf in pdf_files %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            {{ pdf }}
+                            <!-- الرابط الآن صالح للتحميل -->
+                            <a class="btn btn-dark" href="/download/{{ pdf | urlencode }}" download>
+                                📥 Download
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                {% elif pdf_path %}
+                    <!-- تحميل مباشر إذا pdf_files غير موجود -->
+                    <a class="btn btn-dark" href="/download-pdf">
+                        📥 Download Latest PDF
+                    </a>
+                {% else %}
+                    <p>No PDF files found.</p>
+                {% endif %}
+            </div>
+
+            <a href="/market" class="btn btn-outline-success px-5 py-3 rounded-pill fw-bold">
+                🌿 View Supplements
+            </a>
+        </div>
+
+        <div class="mt-4">
+            <a href="/index" class="text-decoration-none text-success fw-bold">← Analyze another plant</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

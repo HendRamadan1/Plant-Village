@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container py-5">
+    <div class="col-lg-7 mx-auto shadow-lg bg-white p-5 rounded-5 text-center">
+        <div class="mb-4">
+            <span class="badge bg-light text-success p-2 px-3 rounded-pill">AI Diagnostic Tool</span>
+        </div>
+        <h2 class="fw-bold mb-3">Start Plant Analysis</h2>
+        <p class="text-muted mb-5">Upload your plant leaf photo and let our AI detect any potential diseases in seconds.</p>
+        
+        <form action="/submit" method="POST" enctype="multipart/form-data">
+            <div class="mb-4 p-4 border border-2 border-dashed rounded-4" style="border-style: dashed !important; border-color: #508D4E !important;">
+                <input type="file" name="image" class="form-control border-0 bg-transparent" id="uploadInput">
+                <label for="uploadInput" class="mt-2 text-muted small">Supports JPG, PNG</label>
+            </div>
+            <button type="submit" class="btn btn-success w-100 py-3 rounded-pill fw-bold shadow">
+                🚀 Run AI Analysis
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}
