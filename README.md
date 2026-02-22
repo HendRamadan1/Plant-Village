@@ -34,14 +34,14 @@ Welcome to **Plant Village**, a web-based project for detecting and analyzing pl
 
 ## 📷 Demo Screenshots
 
+### Home page
+![Home Page](https://github.com/HendRamadan1/Plant-Village/blob/main/Screenshot%20(111).png)
+
 ### Upload & Analyze a Plant
-![Upload Demo](path_to_your_screenshot1.png)
+![Analysis Demo](https://github.com/HendRamadan1/Plant-Village/blob/main/Screenshot%20(112).png)
 
-### Generated PDF Report
-![PDF Demo](path_to_your_screenshot2.png)
-
-### Market / Supplements Page
-![Market Demo](path_to_your_screenshot3.png)
+### Report / Generated PDF Report
+![Report Demo](http://github.com/HendRamadan1/Plant-Village/blob/main/Screenshot%20(115).png)
 
 ---
 
